@@ -15,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   LinkedinPosts.init({
     text: DataTypes.TEXT,
-    postDate: DataTypes.DATE,
+    postDate: DataTypes.DATEONLY,
+    postHour: DataTypes.TIME
   }, {
     sequelize,
     modelName: 'LinkedinPost',

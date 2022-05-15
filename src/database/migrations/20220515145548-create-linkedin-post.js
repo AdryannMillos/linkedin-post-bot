@@ -12,7 +12,10 @@ module.exports = {
         type: Sequelize.TEXT
       },
       postDate:{
-        type: Sequelize.DATE
+        type: Sequelize.DATEONLY
+      },
+      postHour:{
+        type: Sequelize.TIME
       },
       createdAt: {
         allowNull: false,
