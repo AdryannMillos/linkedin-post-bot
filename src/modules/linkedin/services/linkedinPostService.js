@@ -31,9 +31,11 @@ async function linkedinPost(text) {
 
   await setTimeout(2000);
 
-  // await page.click('.share-actions__primary-action.artdeco-button');
+  await page.click('.share-actions__primary-action.artdeco-button');
 
-  // await browser.close();
+  await browser.close();
 };
 
-// publi("<h1>olá mundo eu fiz um bot</h1>");
+module.exports = {
+    linkedinPost
+  };
