@@ -3,7 +3,7 @@ const puppeteer = require("puppeteer");
 const  { setTimeout } = require('timers/promises');
 require("dotenv").config();
 
-async function publi(text) {
+async function linkedinPost(text) {
   const browser = await puppeteer.launch({ headless: false});
   const page = await browser.newPage();
 
