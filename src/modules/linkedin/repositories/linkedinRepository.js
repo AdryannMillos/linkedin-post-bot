@@ -1,6 +1,6 @@
 const Models = require("../../../models/index");
 
-const findAll = async () => await Models.LinkedinPost.findAll();
+const findAll = async (date) => await Models.LinkedinPost.findAll({where:{ postDate: date}});
 
 const findByPk = async (userId) => await Models.LinkedinPost.findByPk(userId,{include: ['user']});
 
@@ -13,7 +13,7 @@ const destroy = async (userId) => await Models.LinkedinPost.destroy({ where: { u
 const findOne = async (user) => await Models.LinkedinPost.findOne(user);
 
 module.exports = {
-    findAll,
+  findAll,
   findByPk,
   create,
   update,
