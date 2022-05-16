@@ -31,7 +31,7 @@ async function linkedinPost(text) {
 
   await setTimeout(2000);
 
-  await page.click('.share-actions__primary-action.artdeco-button');
+  // await page.click('.share-actions__primary-action.artdeco-button');
 
   await browser.close();
 };

@@ -1,6 +1,6 @@
 const linkedinPostService = require("../services/linkedinPostService");
 const linkedinCreateService = require("../services/linkedinCreateService");
-const linkedinShowService = require("../services/linkedinSchedulePostService");
+const linkedinScheduleService = require("../services/linkedinScheduleService");
 
 async function post(req, res) {
   try {
@@ -26,7 +26,7 @@ async function create(req, res) {
 
 async function index(req, res) {
   try {
-    const scheduledPosts = await linkedinSchedulePostService.show();
+    const scheduledPosts = await linkedinScheduleService.show();
 
     return res.status(201).json(scheduledPosts);
   } catch (err) {
