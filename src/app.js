@@ -1,7 +1,7 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const schedule = require("node-schedule");
-const scheduledPost = require("./modules/linkedin/services/linkedinPostSchedulePost");
+const scheduledPost = require("./modules/linkedin/services/linkedinPostScheduleTextPost");
 require("dotenv").config();
 
 const app = express();
@@ -14,9 +14,9 @@ app.use(
 );
 
 schedule.scheduleJob("00 * * * * *", async () => {
-  console.log("i run...");
+  console.log("Running");
   await scheduledPost.schedulePost();
-  console.log("posted");
+  console.log("Finished");
 });
 
 module.exports = app;

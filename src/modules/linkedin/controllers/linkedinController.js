@@ -1,11 +1,11 @@
-const linkedinPostService = require("../services/linkedinPostService");
+const linkedinPostTextService = require("../services/linkedinPostTextService");
 const linkedinCreateService = require("../services/linkedinCreateService");
 const linkedinScheduleService = require("../services/linkedinScheduleService");
 
 async function post(req, res) {
   try {
     const text = req.body.text;
-    await linkedinPostService.linkedinPost(text);
+    await linkedinPostTextService.linkedinPost(text);
     return res.status(200).json({ message: "Posted" });
   } catch (err) {
     return res.status(500).json({ message: err.message });
