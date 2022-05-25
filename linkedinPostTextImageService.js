@@ -46,9 +46,9 @@ async function linkedinPost(text) {
 
   await page.waitForSelector('button.m12');
   await page.click('button.m12');
-  // await page.click('.share-actions__primary-action.artdeco-button');
+  await page.click('.share-actions__primary-action.artdeco-button');
 
-  // await browser.close();
+  await browser.close();
 };
 
 linkedinPost("this is a bot test");
