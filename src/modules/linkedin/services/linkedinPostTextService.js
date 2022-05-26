@@ -4,7 +4,7 @@ const  { setTimeout } = require('timers/promises');
 require("dotenv").config();
 
 async function linkedinPost(text) {
-  const browser = await puppeteer.launch({ headless: false});
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
   await page.goto('https://www.linkedin.com/uas/login?fromSignIn=true&trk=cold_join_sign_in');
