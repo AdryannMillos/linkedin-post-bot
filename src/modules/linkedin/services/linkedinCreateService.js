@@ -1,10 +1,11 @@
 "use strict";
 const linkedinRepository = require("../repositories/linkedinRepository");
 
-async function create(text, postDate) {
+async function create(text, postDate, postHour) {
   const linkedinPost = {
     text: text,
-    postDate: new Date(postDate),
+    postDate: postDate,
+    postHour: postHour
   };
 
   await linkedinRepository.create(linkedinPost);

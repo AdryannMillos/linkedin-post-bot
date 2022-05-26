@@ -16,8 +16,9 @@ async function create(req, res) {
   try {
     const text = req.body.text;
     const postDate = req.body.postDate;
+    const postHour = req.body.postHour;
 
-    await linkedinCreateService.create(text, postDate);
+    await linkedinCreateService.create(text, postDate, postHour);
     return res.status(201).json({ message: "Created" });
   } catch (err) {
     return res.status(500).json({ message: err.message });
