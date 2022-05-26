@@ -4,7 +4,7 @@ const linkedinRepository = require("../repositories/linkedinRepository");
 async function create(text, postDate) {
   const linkedinPost = {
     text: text,
-    postDate: postDate,
+    postDate: new Date(postDate),
   };
 
   await linkedinRepository.create(linkedinPost);

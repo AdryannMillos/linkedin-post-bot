@@ -1,6 +1,6 @@
 
 "use strict";
-const linkedinPostService = require("./linkedinPostTextService");
+const linkedinPostTextService = require("./linkedinPostTextService");
 const LinkedinScheduleService = require("./linkedinScheduleService")
 
 async function schedulePost() {
