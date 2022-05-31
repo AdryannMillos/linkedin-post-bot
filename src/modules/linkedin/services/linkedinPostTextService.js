@@ -24,9 +24,9 @@ async function linkedinPost(text) {
   await page.click('.btn__primary--large');
   
 
-  await page.waitForSelector('button.artdeco-button.artdeco-button--muted.artdeco-button--4.artdeco-button--tertiary.ember-view.share-box-feed-entry__trigger');
+  await page.waitForSelector('button');
 
-  await page.click('button.artdeco-button.artdeco-button--muted.artdeco-button--4.artdeco-button--tertiary.ember-view.share-box-feed-entry__trigger');
+  await page.click('button');
 
 
   await page.waitForSelector('div.ql-editor.ql-blank');
