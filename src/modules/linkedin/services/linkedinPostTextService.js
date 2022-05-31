@@ -24,9 +24,9 @@ async function linkedinPost(text) {
   await page.click('.btn__primary--large');
   
 
-  await page.waitForSelector('button');
+  await page.waitForSelector('button.btn__primary--large');
 
-  await page.click('button');
+  await page.click('button.btn__primary--large');
 
 
   await page.waitForSelector('div.ql-editor.ql-blank');
