@@ -17,7 +17,7 @@ schedule.scheduleJob("00 * * * * *", async () => {
   console.log("Running");
   console.log(new Date().getHours());
   await scheduledPost.schedulePost();
-  console.log("Finished");
+  console.log("Finished"); 
 });
 
 module.exports = app;
