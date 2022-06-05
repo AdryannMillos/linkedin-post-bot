@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.DATEONLY
       },
       postHour:{
-        type: Sequelize.TIME
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
